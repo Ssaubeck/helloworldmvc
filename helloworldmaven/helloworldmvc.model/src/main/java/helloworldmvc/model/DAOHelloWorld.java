@@ -53,18 +53,15 @@ public class DAOHelloWorld
 	{
 		if (instance==null) 
 		{
-			setInstance(DAOHelloWorld.instance);
-			return instance; 
+			setInstance(new DAOHelloWorld());
+			
 		}
-		else
-		{
-			return null; 
-		}
+		return instance;
 	}
 
 	private static final void setInstance(DAOHelloWorld instance) throws IOException 
 	{
-		DAOHelloWorld.instance = new DAOHelloWorld();
+		DAOHelloWorld.instance = instance;
 	}
 	
 
